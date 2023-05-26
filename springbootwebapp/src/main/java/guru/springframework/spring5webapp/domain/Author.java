@@ -1,26 +1,39 @@
 package guru.springframework.spring5webapp.domain;
 
 import javax.persistence.*;
-import java.util.Objects;
+import java.util.HashSet;
 import java.util.Set;
+
+/**
+ * Created by jt on 12/22/19.
+ */
 @Entity
 public class Author {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String firstName;
     private String lastName;
-    @ManyToMany(mappedBy = "authors")
-    private Set<Book> book;
 
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books = new HashSet<>();
 
     public Author() {
     }
 
-    public Author(String firstName, String lastName, Set<Book> book) {
+    public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.book = book;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -39,20 +52,22 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public Set<Book> getBook() {
-        return book;
+    public Set<Book> getBooks() {
+        return books;
     }
 
-    public void setBook(Set<Book> book) {
-        this.book = book;
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 
     @Override
@@ -62,21 +77,11 @@ public class Author {
 
         Author author = (Author) o;
 
-        return Objects.equals(id, author.id);
+        return id != null ? id.equals(author.id) : author.id == null;
     }
 
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
-    }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", book=" + book +
-                '}';
     }
 }
