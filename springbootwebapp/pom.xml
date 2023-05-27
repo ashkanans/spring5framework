@@ -9,12 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>guru.springframework</groupId>
+	<groupId>webapp.springframework</groupId>
 	<artifactId>spring5webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>spring5webapp</name>
-
 	<description>Example Spring 5 Web Application</description>
 
 	<properties>
