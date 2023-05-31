@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>guru.springframework</groupId>
-    <artifactId>sfg-di</artifactId>
+    <artifactId>dependency-injection</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sfg-di</name>
     <description>sfg-di</description>
