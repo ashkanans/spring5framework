@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>spring5webapp</name>
-	<description>Example Spring 5 Web Application</description>
+	<description>Example Spring 5 Web guru.spring5framework.sfgpetclinic.Application</description>
 
 	<properties>
 		<java.version>11</java.version>
