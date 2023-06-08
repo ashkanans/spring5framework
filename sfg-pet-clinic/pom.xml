@@ -47,8 +47,9 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/ashkanans/spring5framework.git</developerConnection>
-        <tag>sfg-pet-clinic-0.0.1</tag>
+        <developerConnection>scm:git:https://github.com/ashkanans/spring5frameworkmc.git
+        </developerConnection>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
