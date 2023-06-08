@@ -50,7 +50,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:ashkanans/spring5framework.git</developerConnection>
+        <developerConnection>scm:https://github.com/ashkanans/spring5framework.git</developerConnection>
         <tag>sfg-pet-clinic-0.0.1</tag>
     </scm>
 
